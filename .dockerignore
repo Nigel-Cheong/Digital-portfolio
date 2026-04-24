@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.gitignore
+vcard-react
+*.old
+index.txt
+README.md.old
+index.html.old
