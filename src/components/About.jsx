@@ -74,7 +74,7 @@ const About = () => {
               <figure className="modal-avatar-box">
                 <img src={selectedTestimonial.avatar} alt={selectedTestimonial.name} width="80" data-modal-img />
               </figure>
-              <img src="/assets/images/icon-quote.svg" alt="quote icon" />
+              <img src="assets/images/icon-quote.svg" alt="quote icon" />
             </div>
             <div className="modal-content">
               <h4 className="h3 modal-title" data-modal-title>{selectedTestimonial.name}</h4>

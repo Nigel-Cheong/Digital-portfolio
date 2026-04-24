@@ -1,7 +1,7 @@
 export const userData = {
   name: "Nigel Cheong",
   title: "Web developer",
-  avatar: "/assets/images/my-avatar.png",
+  avatar: "assets/images/my-avatar.png",
   contacts: [
     {
       title: "Email",
