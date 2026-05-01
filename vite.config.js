@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Digital-portfolio/', // Set this to your repository name
+  base: '/', // Updated to root since we are changing the repo to a User Site
 })
