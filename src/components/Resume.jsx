@@ -20,6 +20,7 @@ const Resume = () => {
           {resumeData.education.map((item, index) => (
             <li className="timeline-item" key={index}>
               <h4 className="h4 timeline-item-title">{item.title}</h4>
+              {item.role && <h5 className="h5 timeline-item-subtitle" style={{ color: 'var(--orange-yellow-crayola)', marginBottom: '5px' }}>{item.role}</h5>}
               <span>{item.date}</span>
               <p className="timeline-text">{item.description}</p>
             </li>
@@ -39,6 +40,7 @@ const Resume = () => {
           {resumeData.experience.map((item, index) => (
             <li className="timeline-item" key={index}>
               <h4 className="h4 timeline-item-title">{item.title}</h4>
+              {item.role && <h5 className="h5 timeline-item-subtitle" style={{ color: 'var(--orange-yellow-crayola)', marginBottom: '5px' }}>{item.role}</h5>}
               <span>{item.date}</span>
               <p className="timeline-text">{item.description}</p>
             </li>

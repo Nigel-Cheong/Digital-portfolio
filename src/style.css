@@ -746,15 +746,22 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .clients-item img {
-  width: 100%;
-  filter: grayscale(1);
+  width: 240px;  /* Even larger width */
+  height: 140px; /* Even larger height */
+  object-fit: contain;
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.clients-item img:hover { 
+  transform: scale(1.05); 
+}
 
 
 

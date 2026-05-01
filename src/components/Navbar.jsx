@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = ({ activePage, setActivePage }) => {
-  const navItems = ['About', 'Resume', 'Portfolio', 'Blog', 'Contact'];
+  const navItems = ['About', 'Resume', 'Contact'];
 
   return (
     <nav className="navbar">

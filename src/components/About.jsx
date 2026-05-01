@@ -43,6 +43,7 @@ const About = () => {
       </section>
 
       {/* Testimonials */}
+      {/* 
       <section className="testimonials">
         <h3 className="h3 testimonials-title">Testimonials</h3>
         <ul className="testimonials-list has-scrollbar">
@@ -61,8 +62,10 @@ const About = () => {
           ))}
         </ul>
       </section>
+      */}
 
       {/* Testimonials Modal */}
+      {/* 
       {selectedTestimonial && (
         <div className={`modal-container ${selectedTestimonial ? 'active' : ''}`} data-modal-container>
           <div className={`overlay ${selectedTestimonial ? 'active' : ''}`} data-overlay onClick={closeModal}></div>
@@ -86,10 +89,11 @@ const About = () => {
           </section>
         </div>
       )}
+      */}
 
       {/* Clients */}
       <section className="clients">
-        <h3 className="h3 clients-title">Clients</h3>
+        <h3 className="h3 clients-title">Companies I've Worked With</h3>
         <ul className="clients-list has-scrollbar">
           {aboutData.clients.map((client, index) => (
             <li className="clients-item" key={index}>

@@ -1,67 +1,51 @@
 export const aboutData = {
   aboutMe: [
-    "I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
-    "My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies."
+    "I am a Results-driven Sales Engineer and Google Certified Professional Cloud Architect with a strong foundation in building secure, scalable enterprise solutions. Recently, I was a Cloud Architect Apprentice at Google, specializing in integrating complex backend systems with modern AI frameworks like Gemini.",
+    "My expertise spans across Multi-Cloud environments (GCP/AWS/Azure), full-stack development (React, Python, Java, C#), and DevOps. I have a proven track record of delivering high-impact automation that drives efficiency gains. I am passionate about driving digital transformation through robust engineering and citizen-centric innovation."
   ],
   services: [
     {
-      title: "Web design",
-      description: "The most modern and high-quality design made at a professional level.",
-      icon: "assets/images/icon-design.svg"
-    },
-    {
-      title: "Web development",
-      description: "High-quality development of sites at the professional level.",
+      title: "Enterprise Cloud Architecture",
+      description: "Designing secure, scalable, and hybrid cloud solutions across GCP, AWS, and Azure.",
       icon: "assets/images/icon-dev.svg"
     },
     {
-      title: "Mobile apps",
-      description: "Professional development of applications for iOS and Android.",
+      title: "AI Integration & Automation",
+      description: "Integrating Generative AI frameworks (like Gemini) into enterprise workflows to automate processes and reduce manual overhead.",
       icon: "assets/images/icon-app.svg"
     },
     {
-      title: "Photography",
-      description: "I make high-quality photos of any category at a professional level.",
+      title: "Full-Stack Web Development",
+      description: "Building responsive, modern web applications using ReactJS, JavaScript, and scalable backend services.",
+      icon: "assets/images/icon-design.svg"
+    },
+    {
+      title: "Technical Enablement",
+      description: "Leading technical upskilling programs and delivering deep-dive demonstrations to stakeholders and C-suite executives.",
       icon: "assets/images/icon-photo.svg"
     }
   ],
   testimonials: [
+    // You can replace these with actual recommendations from LinkedIn later
     {
-      name: "Daniel lewis",
+      name: "Google Colleague",
       avatar: "assets/images/avatar-1.png",
-      date: "14 June, 2021",
-      datetime: "2021-06-14",
-      content: "Nigel was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      date: "March 2026",
+      datetime: "2026-03-01",
+      content: "Nigel is an exceptional Cloud Architect Apprentice. His ability to integrate Gemini Enterprise with M365 significantly reduced our information retrieval time. He is a natural leader when it comes to technical enablement."
     },
     {
-      name: "Jessica miller",
+      name: "SAF Superior",
       avatar: "assets/images/avatar-2.png",
-      date: "14 June, 2021",
-      datetime: "2021-06-14",
-      content: "Nigel was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-    },
-    {
-      name: "Emily evans",
-      avatar: "assets/images/avatar-3.png",
-      date: "14 June, 2021",
-      datetime: "2021-06-14",
-      content: "Nigel was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
-    },
-    {
-      name: "Henry william",
-      avatar: "assets/images/avatar-4.png",
-      date: "14 June, 2021",
-      datetime: "2021-06-14",
-      content: "Nigel was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+      date: "January 2024",
+      datetime: "2024-01-01",
+      content: "During his national service, Nigel spearheaded critical digitization projects. His expertise in UX design and technical procurement was invaluable to the 3rd Singapore Division."
     }
   ],
   clients: [
-    { name: "Client 1", logo: "assets/images/logo-1-color.png" },
-    { name: "Client 2", logo: "assets/images/logo-2-color.png" },
-    { name: "Client 3", logo: "assets/images/logo-3-color.png" },
-    { name: "Client 4", logo: "assets/images/logo-4-color.png" },
-    { name: "Client 5", logo: "assets/images/logo-5-color.png" },
-    { name: "Client 6", logo: "assets/images/logo-6-color.png" }
+    { name: "Google Cloud", logo: "assets/images/Google_Favicon_2025.svg.png" },
+    { name: "Singapore Armed Forces", logo: "assets/images/singapore-army-saf.png" },
+    { name: "Nanyang Polytechnic", logo: "assets/images/Nanyang Polytechnic logo.png" },
+    { name: "Global Health Byte", logo: "assets/images/global_health_byte_pte_ltd_logo.jpg" }
   ]
 };
-

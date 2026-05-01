@@ -1,35 +1,28 @@
 export const userData = {
   name: "Nigel Cheong",
-  title: "Web developer",
+  title: "Cloud Architect & Sales Engineer",
   avatar: "assets/images/my-avatar.png",
   contacts: [
     {
-      title: "Email",
-      value: "richard@example.com",
-      link: "mailto:richard@example.com",
-      icon: "mail-outline"
-    },
-    {
-      title: "Phone",
-      value: "+1 (213) 352-2795",
-      link: "tel:+12133522795",
-      icon: "phone-portrait-outline"
-    },
-    {
-      title: "Birthday",
-      value: "June 23, 1982",
-      datetime: "1982-06-23",
-      icon: "calendar-outline"
-    },
-    {
       title: "Location",
-      value: "Sacramento, California, USA",
+      value: "Singapore",
       icon: "location-outline"
+    },
+    {
+      title: "LinkedIn",
+      value: "nigelcheongsingapore",
+      link: "https://www.linkedin.com/in/nigelcheongsingapore",
+      icon: "logo-linkedin"
+    },
+    {
+      title: "GitHub",
+      value: "Nigel-Cheong",
+      link: "https://github.com/Nigel-Cheong",
+      icon: "logo-github"
     }
   ],
   socials: [
-    { name: "Facebook", link: "#", icon: "logo-facebook" },
-    { name: "Twitter", link: "#", icon: "logo-twitter" },
-    { name: "Instagram", link: "#", icon: "logo-instagram" }
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/nigelcheongsingapore", icon: "logo-linkedin" },
+    { name: "GitHub", link: "https://github.com/Nigel-Cheong", icon: "logo-github" }
   ]
 };
