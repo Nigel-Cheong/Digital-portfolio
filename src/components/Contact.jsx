@@ -4,7 +4,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
-    message: ''
+    message: '',
+    website: '' // This is our disguised honeypot
   });
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,12 +20,20 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // 1. Honeypot check: If the disguised 'website' field is filled, it's likely a bot
+    if (formData.website) {
+      console.warn("Bot detected via honeypot.");
+      setStatus({ type: 'success', message: 'Message sent successfully!' }); // Silently fail for the bot
+      return;
+    }
+
     setIsSubmitting(true);
     setStatus({ type: '', message: '' });
 
     try {
       // Replace this URL with your actual Cloud Function URL after deployment
-      const CLOUD_FUNCTION_URL = 'YOUR_CLOUD_FUNCTION_URL';
+      const CLOUD_FUNCTION_URL = 'https://asia-southeast1-vibed-with-love.cloudfunctions.net/portfolio-contact-service';
       
       const response = await fetch(CLOUD_FUNCTION_URL, {
         method: 'POST',
@@ -36,7 +45,7 @@ const Contact = () => {
 
       if (response.ok) {
         setStatus({ type: 'success', message: 'Message sent successfully!' });
-        setFormData({ fullname: '', email: '', message: '' });
+        setFormData({ fullname: '', email: '', message: '', website: '' });
       } else {
         setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
       }
@@ -57,12 +66,23 @@ const Contact = () => {
         <h2 className="h2 article-title">Contact</h2>
       </header>
 
-      <section className="mapbox" data-mapbox>
-        <figure>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-            width="400" height="300" loading="lazy" title="Google Map"></iframe>
-        </figure>
+      <section className="contact-info-section" style={{ marginBottom: '35px' }}>
+        <p style={{ color: 'var(--light-gray)', fontSize: 'var(--fs-6)', lineHeight: '1.6', marginBottom: '25px' }}>
+          I'm always open to discussing new projects, cloud architecture challenges, or opportunities to innovate. Feel free to reach out via the form below or connect with me on professional platforms.
+        </p>
+        
+        <ul className="social-list" style={{ justifyContent: 'flex-start', gap: '20px' }}>
+          <li className="social-item">
+            <a href="https://www.linkedin.com/in/nigelcheongsingapore" className="social-link" style={{ fontSize: '24px', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li className="social-item">
+            <a href="https://github.com/Nigel-Cheong" className="social-link" style={{ fontSize: '24px', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section className="contact-form">
@@ -80,6 +100,20 @@ const Contact = () => {
 
         <form className="form" data-form onSubmit={handleSubmit}>
           <div className="input-wrapper">
+            {/* Disguised Honeypot field - hidden from users */}
+            <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }} aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input 
+                type="text" 
+                id="website"
+                name="website" 
+                tabIndex="-1" 
+                autoComplete="off"
+                value={formData.website}
+                onChange={handleInputChange}
+              />
+            </div>
+            
             <input 
               type="text" 
               name="fullname" 
