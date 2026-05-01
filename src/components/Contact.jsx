@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const Contact = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
@@ -21,10 +23,15 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Honeypot check: If the disguised 'website' field is filled, it's likely a bot
+    // 1. Honeypot check
     if (formData.website) {
       console.warn("Bot detected via honeypot.");
-      setStatus({ type: 'success', message: 'Message sent successfully!' }); // Silently fail for the bot
+      setStatus({ type: 'success', message: 'Message sent successfully!' });
+      return;
+    }
+
+    if (!executeRecaptcha) {
+      setStatus({ type: 'error', message: 'ReCAPTCHA has not loaded yet. Please try again in a moment.' });
       return;
     }
 
@@ -32,7 +39,10 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // Replace this URL with your actual Cloud Function URL after deployment
+      // 2. Generate the reCAPTCHA token
+      const token = await executeRecaptcha('contact_form_submit');
+
+      // 3. Send data + token to the backend
       const CLOUD_FUNCTION_URL = 'https://asia-southeast1-vibed-with-love.cloudfunctions.net/portfolio-contact-service';
       
       const response = await fetch(CLOUD_FUNCTION_URL, {
@@ -40,7 +50,10 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: token
+        }),
       });
 
       if (response.ok) {
