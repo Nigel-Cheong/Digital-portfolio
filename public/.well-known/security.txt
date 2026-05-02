@@ -1,0 +1,7 @@
+Contact: https://www.linkedin.com/in/nigelcheongsingapore
+Expires: 2027-05-01T12:00:00.000Z
+Acknowledgements: https://nigelcheong.com
+Canonical: https://nigelcheong.com/.well-known/security.txt
+Hiring: https://www.linkedin.com/in/nigelcheongsingapore
+Policy: https://www.linkedin.com/in/nigelcheongsingapore
+Preferred-Languages: en
